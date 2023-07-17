@@ -13,7 +13,7 @@ body{
     padding-top: 1.2rem;
 }
 
-/* list */
+/* 'list' */
 .list li{
     display:inline-block;
     font-size:1rem;
@@ -58,9 +58,61 @@ body{
     box-shadow: 0px 0px 3px 4px rgba(230, 196, 196, 0.3);
 }
 
+
+/*  hamburger menu */
+  
+.margin-right{
+    margin-right: 10px;
+}
+#outer{
+    width:100%;
+    position: relative;
+}
+#inner{
+    position: absolute;
+    right:0%;
+}
+.hamburger-menu div{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 1rem;
+    display:none;
+  }
+  
+  .ham-dropdown {
+    width: 4rem;
+    position: relative;
+    display:none;
+    margin-top: .1rem;
+    padding:1%;
+  }
+  
+  .ham-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    right:10px;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+  }
+  
+  .ham-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    display: block;
+  }
+  
+  .ham-dropdown-content a:hover {background-color: #ddd;}
+  
+  .ham-dropdown:hover .ham-dropdown-content {display: block;}
+  
 /* about section */
 
-#about-section{
+#about{
     height:auto;
     width:100%;
     position: relative;
@@ -72,14 +124,14 @@ body{
     margin:auto;
     margin-top:-17vh;
 }
-#about-section div img{
+#about div img{
     height:100%;
     width:100%;
     border-radius:50%;
     box-shadow: 0px 0px 2px 4px rgba(29, 26, 26, 0.3);
 
 }
-#about-section p{
+#about p{
     font-size:1.2rem;
     font-weight:200;
     margin-top: 3%;
@@ -92,7 +144,7 @@ body{
 }
 
 /* skills */
-#skill{
+#skills{
     background-color: #9e9b9b29;
 }
 .section-heading{
@@ -183,7 +235,7 @@ body{
 }
 
 #form-details input{
-    width:30rem;
+    width:90%;
     height:1.8rem;
     margin:8px;
     padding-left:10px;
@@ -199,11 +251,13 @@ body{
 
 #form-details{
     margin-top:20px;
+    width:50%;
 }
 
 #form-details textarea{
     margin:8px;
     padding-left:5px;
+    width:90%;
     box-sizing:content-box;
     border-top: none;
     border-left:none;
@@ -221,7 +275,7 @@ body{
     color:white;
     width:auto;
     height:1.8rem;
-    margin-left: 150px;
+    margin-left:35%;
     background-color: transparent;
 }
 
@@ -234,7 +288,8 @@ body{
 }
 
 #get-in-touch{
-    margin-left: 80px;
+    width:45%;
+    margin-left:3% ;
 }
 
 #get-in-touch h3{ 
@@ -278,10 +333,10 @@ margin-right: 5px;
 
 .work-experence-box h3::before{
     content:'';
-    background-image: url(tata_logo.jpg);
+    background-image: url(./tata_logo.jpg);
     display:inline-block;
-    height:200x;
-    width:200px;
+    height:20x;
+    width:20px;
     background-size: contain;
 }
 
@@ -354,8 +409,8 @@ margin-right: 5px;
 
 /* eductaion */
 
-#edu{
-    background-color: #9e9b9b29;
+#education{
+    background-color: #9e9b9b29;'8p'p
 
 }
 .edu-description{
@@ -380,4 +435,94 @@ margin-right: 5px;
     position: sticky;
     top:30%;
     margin-left:-7px;
+}
+
+/* media query for small screen size */
+
+@media screen and (max-width:500px){
+
+    #name{
+        font-size:2rem;
+    }
+
+    #body-header{
+        height: 62vh;
+    }
+
+    #about p{
+        font-size:1rem;
+    }
+
+    .section-heading{
+        font-size: 25px;
+    }
+    .work-experence-box{
+        width: 80%;
+        left:15%;
+    }
+
+    .work-experence-box:nth-child(2n){
+        left:15%;
+    }
+
+    #timeline-divider-work{
+        left:10%;
+        height: 66%;
+        top:4%;
+    }
+
+    .work-experence-box:nth-child(2n+1)::after{
+        top:5% !important;
+        left:-9.1% !important;
+        z-index:1;
+    }
+    
+    .work-experence-box h3, .work-experence-box h5,.work-experence-box h6 {
+        text-align: left;
+    }
+
+    /* hamburger enabling*/
+    .hamburger-menu div, .ham-dropdown{
+        display:block;
+    }
+
+    #menu{
+        display:none;
+    }
+    /* education section media query */
+
+    #timeline-divider-edu{
+        height: 67%;
+        top:5%;
+        left:10%;
+    }
+
+    .work-experence-box h3::before{
+        height:0px;
+        width:0px;
+    }
+
+    .edu-description{
+        text-align: left;
+    }
+
+    .section-contact{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+     }
+
+     #get-in-touch{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    #form-details{
+        width:100%;
+    }
+
+    ul {
+        padding: 0px;
+    }
+
 }
